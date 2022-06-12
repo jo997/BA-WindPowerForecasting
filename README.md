@@ -1,5 +1,6 @@
 ## BachelorThesisWPF
-In the upcoming decade, wind power will expand rapidly. In 2021 wind energy had the largest share in German electricity production, about 23 %.  
+In the upcoming decade, wind power will expand rapidly.   
+In 2021 wind energy had the largest share in German electricity production, about 23 %.  
 Wind power forecasting is required to plan and operate a wind power unit effectively and successfully.  
 This thesis is about two kinds of wind power forecasting models - Multiple Linear Regression and Support Vector regression.  
 Multiple linear regression is a widely used concept and often serves as a benchmark for regression models. Support Vector Regression is a more complicated concept but has shown promising results in related work.  
