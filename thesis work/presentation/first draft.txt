@@ -1,0 +1,27 @@
+1. Introduction. What  is it about?
+- short abstract and motivation
+- What are the specific research questions to answer?
+- Why is this question important to answer?
+
+2. Research Question and approach
+- which method
+- related work and literature review
+
+3. theretical approach
+- how does Mult Lin Reg work
+- how does SVR work
+
+4. practical approach
+- cleaning the dataset
+- which features
+- Mult Lin Reg model
+- SVR model which kernel, parameters
+
+5. conclusion and results
+- Evaluation scores
+- results
+
+6. discussion and further imporvements 
+- how good are the models, how useful
+- what to do next
+- conclusion 
