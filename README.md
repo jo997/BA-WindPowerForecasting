@@ -1,8 +1,15 @@
-## BachelorThesisWPF
-In the upcoming decade, wind power will expand rapidly.   
-In 2021 wind energy had the largest share in German electricity production, about 23 %.  
-Wind power forecasting is required to plan and operate a wind power unit effectively and successfully.  
-This thesis is about two kinds of wind power forecasting models - Multiple Linear Regression and Support Vector regression.  
-Multiple linear regression is a widely used concept and often serves as a benchmark for regression models. Support Vector Regression is a more complicated concept but has shown promising results in related work.  
-SVR is considered an overall suitable method for wind power forecasting. It is believed that the result is very precise, robust, and shows a compact description of the learned model.  
-We will review and investigate these statements by building and evaluating these two different models and comparing them.
+## Abstract
+Wind power forecasting is required to plan and operate a wind power unit effectively and successfully worldwide. Therefore using models to predict different values are
+inevitable.  
+This thesis concerns two kinds of wind power forecasting models - Multiple Linear Regression and Support Vector Regression (SVR). 
+Multiple Linear Regression is a widely used and well-known concept and often serves as a benchmark for regression models. 
+Support Vector Regression is a more complicated and elaborate concept but has shown promising results in related work. 
+We look at these different approaches and build various models using data from the "La Haute Borne" wind farm in France. 
+In the end, we evaluate and compare the models. The SVR model shows better evaluation scores than the Multiple Linear Regression model and can make a more accurate wind power forecast.
+
+	   
+	   
+### Table of Contents
+- [plots and additional](https://github.com/jo997/BA-WindPowerForecasting/tree/main/thesis%20work/code%20and%20more/plots%2C%20correlation%20and%20feature%20selection)
+- [final models](https://github.com/jo997/BA-WindPowerForecasting/tree/main/thesis%20work/code%20and%20more/models)
+- [thesis defense](https://github.com/jo997/BA-WindPowerForecasting/tree/main/thesis%20work/Thesis%20Defense)	
