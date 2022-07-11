@@ -1,0 +1,287 @@
+Slide 1
+- Bachelor’s Thesis Computer Science Probabilistic Short-term Wind Power Forecasting
+
+----------------------------------------------------------------------------------------------------------
+Slide 2
+- Contents
+01 Introduction -> little bit of Motivation 
+02 Research Question -> main goal of the thesis
+03 Approach -> theoretical approach, coding
+04 Results -> results
+05 Conclusion -> conclusion and discussion
+
+----------------------------------------------------------------------------------------------------------
+Slide 3
+- Introduction
+Why bother with wind power forecasting?
+-> to plan and operate a wind power farm 
+-> big shift to renewable energy sources and cope with the shortage of traditional fossil energy and the environmental pollution
+-> consequently successful integration of large amounts of wind power into the electricity supply system
+
+----------------------------------------------------------------------------------------------------------
+Slide 4
+-> In 2021 wind energy had the largest share in German electricity production, about 23 %
+
+----------------------------------------------------------------------------------------------------------
+Slide 5
+-> research question, what have i done the last 4 months?
+
+----------------------------------------------------------------------------------------------------------
+Slide 6
+-> How to make a wind power forecasting model?
+What is a good approach looking at
+- Multiple Linear Regression 
+- Support Vector Regression 
+Which model works better with the dataset? Can we use these models to make a windpower forecast?
+
+
+----------------------------------------------------------------------------------------------------------
+Slide 7
+Tian et al breakdown of approaches
+physical -> use physical variables concerning the wind farm for physical or numerical
+weather prediction models
+statistical -> use time-series data a wind farm generates
+hybrid models -> combination of NWP and statistical methods
+
+further divide statistical models into three categories: 
+time series approaches -> ARMA (autoregressive-moving-average) or ARIMA
+ensemble prediction approaches -> range of possible future states and often use multiple models to make a prediction
+artificial intelligence approaches -> supervised and unsupervised machine learning approaches
+artificial intelligence model with a supervised machine learning approach
+-> Multiple Linear Regression 
+-> Support Vector Regression 
+
+
+----------------------------------------------------------------------------------------------------------
+Slide 8
+Some literature and reviews
+Tawn et al (2022)
+Tian et all (2021)
+Wang et al (2011)
+-> but generally a lot of papers and articles about the topic
+
+----------------------------------------------------------------------------------------------------------
+Slide 9
+-> approach
+a supervised machine learning approach
+-> Multiple Linear Regression 
+-> Support Vector Regression 
+- talk a little bit about the theory part and then what i did in practice
+----------------------------------------------------------------------------------------------------------
+Slide 10
+- What is Multiple Linear Regression
+- What is Support Vector Regression
+- What is an Evaluation Score or what do I use to evaluate my models and compare them
+
+----------------------------------------------------------------------------------------------------------
+Slide 11
+- lassicregression approach,first thing you learn in a machine learning related lecture or book or anything
+- statistical technique that uses two or more independent variables to predict the outcome of a dependent variable
+- Linear least squares (LLS) is the least-squares approximation of linear functions to data
+- Ordinary Leat Square 
+Least squares optimization is an approach to estimating the parameters of a model by seeking a set of parameters 
+that results in the smallest squared error between the predictions of the model (yhat) and the actual outputs (y), 
+averaged over all examples in the dataset, so-called mean squared error
+- Maximum Likelihood estimation approach is a frequentist probabilistic framework 
+that seeks a set of parameters for the model that maximize a likelihood function.
+
+----------------------------------------------------------------------------------------------------------
+Slide 12
+- example for Lin Reg (Boston housing prices)
+we have the number of rooms and predict the housing price -> 8 rooms like 40.000 dollar
+
+
+----------------------------------------------------------------------------------------------------------
+Slide 13
+- SVM Support VEctor Machines are used for Classification
+- SVR is kind of the regression approach for working with continuous Values instead of Classification
+- In simple linear regression, we try to minimize the error rate.  In SVR, we try to fit the error within a certain threshold.
+
+----------------------------------------------------------------------------------------------------------
+Slide 14
+- w the hyperplane shows the regression curve
+- The hyperplane is the line used to predict the continuous output for the regression. 
+- we can see the ϵ-tube or margin with the borders w+ϵ and w−ϵ. We consider all the data points as long as our data
+is inside this ϵ-tube. 
+- We can also assign some slack variables ξ to account for any points outside the margin. We define apenalty for points outside the tube
+- So we can tune the error margin(ϵ) and the tolerance of falling outside that acceptable error rate.
+- And then we cant to find the tube where most of the data is within with as little as possible slack variables
+- Bu thats not all
+- Until this point, our Support Vector Regression model only uses linear data.
+- The cooler part is that we can make the model or moreprecise the data nonlinearwe with the kernel trick
+We can map our data into some higher feature space using a kernel (which has to follow some math equation like mercers theorem to work)
+and then apply the Standard Support Vector Regression algorithm.
+----------------------------------------------------------------------------------------------------------
+Slide 15
+- we can map the seen data in to x^2 into a new featurespace of x^2.
+Therefore we can map the data into a higher dimension using a kernel and then have many more opportunities to find
+a better fit. Linear regression only looks at the linear possibilities.
+- We do not have to calculate and map every single data point. We only have to calculate the dot product.
+- for more information and the math why this works-> Smola et all does a very good job explaining all of this
+
+----------------------------------------------------------------------------------------------------------
+Slide 16
+- We can choose how tolerant we are of errors, through an acceptable error margin(ϵ) and by tuning our 
+tolerance of falling outside that acceptable error rate
+- we can map linear data into a higher feature space to get a better regression curve for the SVR
+- man different kernels like RBF Kernel Linear Kernel Poly Kernel and many more...
+
+
+----------------------------------------------------------------------------------------------------------
+Slide 17
+- MAE -> mean absolute error, measures the average magnitude of the errors in a set of forecasts, without considering their direction. 
+It measures accuracy for continuous variables.
+- RMSE -> root mean squared error, RMSE is a measure of how spread out these residuals are. 
+In other words, it tells you how concentrated the data is around the line of best fit.
+- R2 score -> how well the data fit the regression model (the goodness of fit)
+- CRPS -> comparison of the predicted cumulative density function (CDF) and the true cumulative density function. 
+So we compare the distribution of the predicted dataset with the test dataset
+- Shapley Values -> attempt to explain why an ML model reports the outputs that it does on an input, 
+is the average of all the marginal contributions to all possible coalitions so every feature.  
+Calculate by computing a weighted average payoff gain that a player provides when included in all coalitions that exclude the player.
+In the simplest ML setting, the players of this cooperative game are replaced by the features of the ML model and the payoff by the model output itself
+
+----------------------------------------------------------------------------------------------------------
+Slide 18
+- After this therotical tlaking we can finaly come to the practical approach and what I did
+- Cleaning the dataset
+- Feature selection
+- Multiple Linear Regression model Support Vector Regression model parameter and kernel selection
+
+
+----------------------------------------------------------------------------------------------------------
+Slide 19
+- The data is from the La haute borne windfarm in France
+- about 150 km to the left of Strasbourg
+- 4 turbines 
+- Data from 2016-12-31 until 2018-01-12
+- 138 columns -> like 30-35 different possible features and 217,588 rows od data with a time stamp
+
+----------------------------------------------------------------------------------------------------------
+Slide 20
+- feature selection
+- I tried some Algorithm from sklearn
+- recursive feature elimination algorithm 
+- select k-Best algorithm
+- tried some features by hand
+- evaluate the different features using Multiple Linear Regression model and taking the data into a 20:80 split so 
+80 % to train the individual models and 20 % to evaluate them.
+- Used MAE score, RMSE score, CRPS, and R2 scores
+
+
+----------------------------------------------------------------------------------------------------------
+Slide 21
+- as you can see model 7 had the best evaluations cores
+
+----------------------------------------------------------------------------------------------------------
+Slide 22
+the pitch angle (BA) 
+the hub temperature (Rt)
+the nacelle temperature (Yt)
+the wind speed (Ws)
+the outdoor temperature (Ot)
+- the pitch angle (BA) -> The pitch angle is the angle the blades of the wind turbine have.
+- the hub temperature (Rt) -> Hub temperature describes the temperature of the hub. 
+The hub is the component that holds the blades and connects them to the main shaft.
+- the nacelle temperature (Yt) -> The nacelle temperature tells the temperature of the nacelle, which is the
+housing on top of the main shaft.
+- the wind speed (Ws)
+- the outdoor temperature (Ot)
+The wind speed and the outdoor temperature are self-explanatory
+
+----------------------------------------------------------------------------------------------------------
+Slide 23
+- SO we use these features for the Mult Lin Reg model and the SVR model. 
+- We clean the datasets and correct any meassurement errors
+- For our SVR model as seen before we can determine the margin for the epsilon tube and the penalty parameter Xi and the kernel
+- Here is a selectionw hat I tried and what did look good.
+- Same evaluation scores here as well 
+
+----------------------------------------------------------------------------------------------------------
+Slide 24
+- finally some results and something interesting
+
+----------------------------------------------------------------------------------------------------------
+Slide 25
+- as mentioned before used a train test splitof 80:20 so we have the test 
+dataset and can plot the real data and the predicted data on atimeline.
+- As we can see some spikes and lows are not quiet reached. A more narrow comparison soon in the next slides
+
+----------------------------------------------------------------------------------------------------------
+Slide 26
+the pitch angle (BA) 
+the hub temperature (Rt)
+the nacelle temperature (Yt)
+the wind speed (Ws)
+the outdoor temperature (Ot)
+- The Shapley values for our Mult Lin reg model
+- The wind speed feature is approximately twice as important as every other feature
+combined. The outdoor temperature is the least significant value
+
+----------------------------------------------------------------------------------------------------------
+Slide 27
+- AVR timeline plot
+- train test split of 80:20 so we have the test 
+dataset and can plot the real data and the predicted data on atimeline. Same datset and same features. 
+Only predicted data is different. hopefuly
+- As we can see some spikes and lows are ntill not quiet reached. But we are more closer than with the Mult Lin Reg
+----------------------------------------------------------------------------------------------------------
+Slide 28
+the pitch angle (BA) 
+the hub temperature (Rt)
+the nacelle temperature (Yt)
+the wind speed (Ws)
+the outdoor temperature (Ot)
+- The Shapley values for our SVR
+- We notice that not much has changed compared to the Mult Lin Reg model. The wind speed
+feature is approximately twice as important as every other feature combined stil. 
+- The outdoor temperature is more important for the SVR model than the Multiple Linear
+Regression model. 
+- The hub temperature is the least significant here. 
+- Overall we can see that both models use the same features with kind of the same Shapley Value
+distribution. Only the less essential features have changed.
+
+----------------------------------------------------------------------------------------------------------
+Slide 29
+- finally comparing the both models with pur evaluation scores.
+MAE	MultLin: 133.29  	SVR: 39.58
+RMSE 	MultLin:  188.86 	SVR:60.87
+R2 	MultLin:  0.829 	SVR:0.982
+CRPS 	MultLin:  174.04 	SVR:122.19
+----------------------------------------------------------------------------------------------------------
+Slide 30
+- and if we plot both as expected the SVR is more close to the real data than the Mult Lin Reg
+
+----------------------------------------------------------------------------------------------------------
+Slide 31
+- to come to an conclusion
+
+----------------------------------------------------------------------------------------------------------
+Slide 32
+- what did the thesisconsist of
+- data processing	
+- parameter selection
+- modeling a Multiple Linear Regression model
+- modeling a Support Vector Regression model
+- evaluating and comparing the different models and come to an conclusion
+
+----------------------------------------------------------------------------------------------------------
+Slide 33
+-assessed two different machine learning approaches for wind power
+forecasting. Multiple Linear Regression model and a Support Vector
+Regression model. 
+- Both models can predict wind power reasonably. However, the
+SVR model has overall better evaluation scores. The MAE score, the RMSE score,
+the R2 score, and CRPS show better results in the SVR model than in the Multiple
+Linear Regression model. 
+- So to finalize the SVR approach works better for this particular wind farm dataset. Furthermore, I suspect an SVR approach
+generally works better for wind power prediction than a Multiple Linear Regression approach
+
+----------------------------------------------------------------------------------------------------------
+Slide 34
+ANd yeah thats basically it.
+Thank you for your interest and attention
+Any questions?
+
+
+----------------------------------------------------------------------------------------------------------
