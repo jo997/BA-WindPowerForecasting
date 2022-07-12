@@ -202,13 +202,10 @@ Slide 24
 - finally some results and something interesting
 
 ----------------------------------------------------------------------------------------------------------
-Slide 25
-- as mentioned before used a train test splitof 80:20 so we have the test 
-dataset and can plot the real data and the predicted data on atimeline.
-- As we can see some spikes and lows are not quiet reached. A more narrow comparison soon in the next slides
+
 
 ----------------------------------------------------------------------------------------------------------
-Slide 26
+Slide 25
 the pitch angle (BA) 
 the hub temperature (Rt)
 the nacelle temperature (Yt)
@@ -219,14 +216,7 @@ the outdoor temperature (Ot)
 combined. The outdoor temperature is the least significant value
 
 ----------------------------------------------------------------------------------------------------------
-Slide 27
-- AVR timeline plot
-- train test split of 80:20 so we have the test 
-dataset and can plot the real data and the predicted data on atimeline. Same datset and same features. 
-Only predicted data is different. hopefuly
-- As we can see some spikes and lows are ntill not quiet reached. But we are more closer than with the Mult Lin Reg
-----------------------------------------------------------------------------------------------------------
-Slide 28
+Slide 26
 the pitch angle (BA) 
 the hub temperature (Rt)
 the nacelle temperature (Yt)
@@ -242,23 +232,28 @@ Regression model.
 distribution. Only the less essential features have changed.
 
 ----------------------------------------------------------------------------------------------------------
-Slide 29
+Slide 27
+- as mentioned before used a train test splitof 80:20 so we have the test 
+dataset and can plot the real data and the predicted data on atimeline.
+- As we can see some spikes and lows are not quiet reached. 
+- As we can see some spikes and lows are ntill not quiet reached. But we are more closer than with the Mult Lin Reg
+
+----------------------------------------------------------------------------------------------------------
+Slide 28
 - finally comparing the both models with pur evaluation scores.
 MAE	MultLin: 133.29  	SVR: 39.58
 RMSE 	MultLin:  188.86 	SVR:60.87
 R2 	MultLin:  0.829 	SVR:0.982
 CRPS 	MultLin:  174.04 	SVR:122.19
 ----------------------------------------------------------------------------------------------------------
-Slide 30
-- and if we plot both as expected the SVR is more close to the real data than the Mult Lin Reg
 
 ----------------------------------------------------------------------------------------------------------
-Slide 31
+Slide 29
 - to come to an conclusion
 
 ----------------------------------------------------------------------------------------------------------
-Slide 32
-- what did the thesisconsist of
+Slide 30
+- what did the thesis consist of
 - data processing	
 - parameter selection
 - modeling a Multiple Linear Regression model
@@ -266,7 +261,7 @@ Slide 32
 - evaluating and comparing the different models and come to an conclusion
 
 ----------------------------------------------------------------------------------------------------------
-Slide 33
+Slide 31
 -assessed two different machine learning approaches for wind power
 forecasting. Multiple Linear Regression model and a Support Vector
 Regression model. 
@@ -278,7 +273,7 @@ Linear Regression model.
 generally works better for wind power prediction than a Multiple Linear Regression approach
 
 ----------------------------------------------------------------------------------------------------------
-Slide 34
+Slide 32
 ANd yeah thats basically it.
 Thank you for your interest and attention
 Any questions?
