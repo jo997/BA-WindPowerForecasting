@@ -1,3 +1,6 @@
+## Bachelor’s Thesis Computer Science 
+# Probabilistic Short-term Wind Power Forecasting
+
 ## Table of Contents
 - [plots and additional](https://github.com/jo997/BA-WindPowerForecasting/tree/main/thesis%20work/code%20and%20more/plots%2C%20correlation%20and%20feature%20selection)
 - [final models](https://github.com/jo997/BA-WindPowerForecasting/tree/main/thesis%20work/code%20and%20more/models)
