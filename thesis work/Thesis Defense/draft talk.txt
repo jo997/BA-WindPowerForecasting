@@ -1,9 +1,5 @@
 Slide 1
-Wrote bachelor thesis the last 4 to 5 month
-Sadly, worked always on Monday so no team meetings for mee
-But today I will present my bachelors thesis and what I have done
-Bachelor’s Thesis Computer Science Probabilistic Short-term Wind Power Forecasting
-
+- Start
 
 ----------------------------------------------------------------------------------------------------------
 Slide 2
@@ -14,7 +10,6 @@ Contents
 - 03 Approach -> theoretical approach and practical approach, so like the methods and the coding or model building
 - 04 Results -> my results
 - 05 Conclusion -> conclusion and discussion
-
 
 ----------------------------------------------------------------------------------------------------------
 Slide 3
@@ -305,29 +300,6 @@ And yeah thats basically it.
 Thank you for your interest and attention
 Any questions?
 
-
-
-
-
-
-
-
-
-
-
-
--
-- no curve sagen	
-- west of 
-- trend is growing
-- notizen schrift mehrere folien auifteilen
-- Fußzeile ändern
-- erst reden und dann folien zeigen
-- lieber mehr sagen als drauf schreiben
-- Balken wie wit die Präsentation ist oder Seitenzahl x/20
-- weniger zu Theorie (Theorie 14 min, Practical 8 min), mehr zu Praxis
-- mehr über feature sagen, was was ist, was die folie zeigt usw.
-- wohin related works? überhaupt in Präsentation? wohin?
 
 
 
